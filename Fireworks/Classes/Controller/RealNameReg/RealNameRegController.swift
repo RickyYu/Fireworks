@@ -246,6 +246,7 @@ class RealNameRegController: BaseViewController, UITableViewDelegate, UITableVie
         let strNum = saleRecordModel.productNumber
         let strPurpose = saleRecordModel.content
         let strCarton = saleRecordModel.productCartons
+        let companyPerson = saleRecordModel.companyPerson
         if AppTools.isEmpty(strName) {
             alert("姓名不可为空!", handler: {
                // self.tfName.becomeFirstResponder()
@@ -303,6 +304,7 @@ class RealNameRegController: BaseViewController, UITableViewDelegate, UITableVie
         parameters["fireworkRecord.productNumber"] = strNum//松香水的数量(升)
         parameters["fireworkRecord.content"] = strPurpose//用途
         parameters["fireworkRecord.productCartons"] = strCarton//用途
+        parameters["fireworkRecord.companyPerson"] = companyPerson
         if saleRecordModel.payTime != "" {
             parameters["fireworkRecord.payTime"] = saleRecordModel.payTime//用途
         }

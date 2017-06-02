@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Fireworks/Classes/Controller/RealNameReg/RealNameRegController.swift"
-            timestampString = "514199876.425956"
+            timestampString = "518082329.776016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "292"
-            endingLineNumber = "292"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
             landmarkName = "saveInfo()"
             landmarkType = "5">
          </BreakpointContent>

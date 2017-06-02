@@ -11,6 +11,7 @@ class SaleRecordModel:BaseModel{
     var credentialsName:String!
     var credentialsCode:String!
     var name:String!
+    var companyPerson:String!
     var address:String!
     var companyName :String!
     var productCartons:String!
@@ -34,6 +35,7 @@ class SaleRecordModel:BaseModel{
         self.address = ""
         self.companyName =  ""
         self.phone = ""
+        self.companyPerson = ""
         self.productName = "烟花爆竹"
         self.productNumber = ""
         self.content = ""
@@ -50,6 +52,7 @@ class SaleRecordModel:BaseModel{
         self.name = dict["name"] as? String ?? ""
         self.address = dict["address"] as? String ?? ""
         self.companyName = dict["companyName"] as? String ?? ""
+        self.companyPerson = dict["companyPerson"] as? String ?? ""
         self.phone = dict["phone"] as? String ?? ""
         self.productName = dict["productName"] as? String ?? ""
         self.productNumber = dict["productNumber"] as? String ?? ""
@@ -80,8 +83,9 @@ class SaleRecordModel:BaseModel{
                 Cell(fieldName: "productName", image: "point", title: "品  名", value: self.productName, state: .TEXT, maxLength: 20),
                 Cell(fieldName: "productCartons", image: "point", title: "数量(箱)", value: self.productCartons, state: .TEXT, maxLength: 6),
                 Cell(fieldName: "productNumber", image: "point", title: "数量(个)", value: self.productNumber, state: .TEXT, maxLength: 6),
-                Cell(fieldName: "address", image: "point", title: "住  址", value: self.address, state: .MULTI_TEXT,maxLength: 50,placeHolder: "选填"),
+                Cell(fieldName: "address", image: "point", title: "现 住 址", value: self.address, state: .MULTI_TEXT,maxLength: 50,placeHolder: "选填"),
                 Cell(fieldName: "companyName", image: "point", title: "所在单位", value: self.companyName, state: .TEXT, maxLength: 40,placeHolder: "选填"),
+                 Cell(fieldName: "companyPerson", image: "point", title: "经 办 人", value: self.companyPerson, state: .TEXT, maxLength: 40,placeHolder: "选填"),
                 Cell(fieldName: "content", image: "point", title: "用  途", value: self.content, state: .MULTI_TEXT, maxLength: 50,placeHolder: "选填")
             ]
         ]
@@ -99,9 +103,10 @@ class SaleRecordModel:BaseModel{
                  Cell(fieldName: "productName", image: "point", title: "品  名", value: self.productName, state: .TEXT, maxLength: 20),
                 Cell(fieldName: "productCartons", image: "point", title: "数量(箱)", value: self.productCartons, state: .TEXT, maxLength: 6),
                 Cell(fieldName: "productNumber", image: "point", title: "数量(个)", value: self.productNumber, state: .TEXT, maxLength: 6),
-                Cell(fieldName: "address", image: "point", title: "住  址", value: self.address, state: .MULTI_TEXT,maxLength: 50,placeHolder: "选填"),
+                Cell(fieldName: "address", image: "point", title: "现 住 址", value: self.address, state: .MULTI_TEXT,maxLength: 50,placeHolder: "选填"),
                 Cell(fieldName: "companyName", image: "point", title: "所在单位", value: self.companyName, state: .TEXT, maxLength: 40,placeHolder: "选填"),
                 Cell(fieldName: "content", image: "point", title: "用  途", value: self.content, state: .MULTI_TEXT, maxLength: 50,placeHolder: "选填"),
+                 Cell(fieldName: "companyPerson", image: "point", title: "经 办 人", value: self.companyPerson, state: .TEXT, maxLength: 40,placeHolder: "选填"),
                 Cell(fieldName: "payTime", image: "point", title: "购买时间", value: self.payTime, state: .READ, maxLength: 50,placeHolder: "选填")
             ]
         ]
@@ -119,8 +124,9 @@ class SaleRecordModel:BaseModel{
                 Cell(fieldName: "productName", image: "point", title: "品  名", value: self.productName, state: .READ, maxLength: 20),
                 Cell(fieldName: "productCartons", image: "point", title: "数量(箱)", value: self.productCartons, state: .READ, maxLength: 6),
                 Cell(fieldName: "productNumber", image: "point", title: "数量(个)", value: self.productNumber, state: .READ, maxLength: 6),
-                Cell(fieldName: "address", image: "point", title: "住  址", value: self.address, state: .READ,maxLength: 50,placeHolder: "选填"),
+                Cell(fieldName: "address", image: "point", title: "现 住 址", value: self.address, state: .READ,maxLength: 50,placeHolder: "选填"),
                 Cell(fieldName: "companyName", image: "point", title: "所在单位", value: self.companyName, state: .READ, maxLength: 40,placeHolder: "选填"),
+                 Cell(fieldName: "companyPerson", image: "point", title: "经 办 人", value: self.companyPerson, state: .TEXT, maxLength: 40,placeHolder: "选填"),
                 Cell(fieldName: "content", image: "point", title: "用  途", value: self.content, state: .READ, maxLength: 50,placeHolder: "选填"),
                 Cell(fieldName: "payTime", image: "point", title: "购买时间", value: self.payTime, state: .READ, maxLength: 50,placeHolder: "选填")
                 
